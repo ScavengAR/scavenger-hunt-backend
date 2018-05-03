@@ -1,10 +1,7 @@
-const User = require('./user')
+const Result = require('./Result');
 
 /**
  * If we had any associations to make, this would be a great place to put them!
- * ex. if we had another model called BlogPost, we might say:
- *
- *    BlogPost.belongsTo(User)
  */
 
 /**
@@ -13,6 +10,7 @@ const User = require('./user')
  * for example, we can say: const {User} = require('../db/models')
  * instead of: const User = require('../db/models/user')
  */
+
 module.exports = {
-  User
-}
+  Result
+};
