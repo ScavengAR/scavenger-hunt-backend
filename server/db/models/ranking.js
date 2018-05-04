@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
 
-const Result = db.define('result', {
+const Ranking = db.define('ranking', {
   name: {
     type: Sequelize.STRING,
     allowNull: false
@@ -12,4 +12,4 @@ const Result = db.define('result', {
   }
 });
 
-module.exports = Result;
+module.exports = Ranking;
