@@ -7,19 +7,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "build-client": "webpack",
-    "build-client-watch": "webpack -w",
     "deploy": "script/deploy",
-    "lint": "eslint ./ --ignore-path .gitignore",
     "postinstall": "touch secrets.js",
     "seed": "node script/seed.js",
     "start": "node server",
-    "start-dev":
-      "NODE_ENV='development' npm run build-client-watch & npm run start-server",
-    "start-server":
-      "nodemon server -e html,js,scss --ignore public --ignore client",
-    "test":
-      "NODE_ENV='test' mocha ./server/**/*.spec.js ./server/**/**/*.spec.js ./client/**/*.spec.js --require @babel/polyfill --require @babel/register"
+    "start-dev": "NODE_ENV='development' & npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "test": "NODE_ENV='test' mocha ./server/**/*.spec.js ./server/**/**/*.spec.js ./client/**/*.spec.js"
   },
   "author": "Fullstack Academy of Code",
   "license": "MIT",
@@ -47,15 +41,7 @@
     "sequelize": "^4.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/polyfill": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
-    "@babel/preset-stage-2": "^7.0.0-beta.40",
-    "@babel/register": "^7.0.0-beta.40",
     "axios-mock-adapter": "^1.9.0",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^8.0.0-beta.2",
     "chai": "^3.5.0",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
@@ -67,8 +53,6 @@
     "react-test-renderer": "^16.0.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-mock-store": "^1.2.3",
-    "supertest": "^3.0.0",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9"
+    "supertest": "^3.0.0"
   }
 }
