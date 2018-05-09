@@ -1,7 +1,7 @@
 const router = require('express').Router();
 module.exports = router;
 
-router.use('/ranking', require('./ranking'))
+router.use('/results', require('./results'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found');
