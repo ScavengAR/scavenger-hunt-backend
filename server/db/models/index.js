@@ -1,5 +1,5 @@
-const Ranking = require('./ranking');
+const Result = require('./Result');
 
 module.exports = {
-  Ranking
+  Result
 };
