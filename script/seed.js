@@ -39,10 +39,18 @@ async function seed() {
     User.create({ email: 'corey@email.com', password: '123' })
   ]);
 
+  const customMaps = await Promise.all([
+    CustomMap.create({ name: 'Times Square', address: '5 times square', instructions: 'Here are instructions to start this banana hunt: ...' }),
+    CustomMap.create({ name: 'Full Stack Academy HQ', address: '5 hanover square', instructions: 'Here are instructions to start this banana hunt: ...' }),
+    CustomMap.create({ name: 'Murray Hill Theaters', address: '300 murray hill', instructions: 'Here are instructions to start this banana hunt: ...' }),
+    CustomMap.create({ name: 'Sunset Park', address: '100 sunset', instructions: 'Here are instructions to start this banana hunt: ...' })
+  ]);
+
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
   console.log(`seeded ${users.length} users`);
   console.log(`seeded ${results.length} results`);
+  console.log(`seeded ${customMaps.length} customMaps`);
   console.log(`seeded successfully`);
 }
 
