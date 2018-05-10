@@ -10,7 +10,7 @@
  * Now that you've got the main idea, check it out in practice below!
  */
 const db = require('../server/db');
-const { Result } = require('../server/db/models');
+const { Result, User, CustomMap } = require('../server/db/models');
 
 async function seed() {
   await db.sync({ force: true });
@@ -20,16 +20,29 @@ async function seed() {
 
   const results = await Promise.all([
     Result.create({ name: 'andrew', time: 300 }),
+    Result.create({ name: 'andrew', time: 400 }),
     Result.create({ name: 'david', time: 400 }),
-    Result.create({ name: 'valarie', time: 600 }),
+    Result.create({ name: 'valerie', time: 600 }),
     Result.create({ name: 'frances', time: 500 }),
     Result.create({ name: 'omri', time: 200 }),
     Result.create({ name: 'geoff', time: 150 }),
-    Result.create({ name: 'cory', time: 200 })
+    Result.create({ name: 'corey', time: 200 })
   ]);
+
+  const users = await Promise.all([
+    User.create({ email: 'andrew@email.com', password: '123', isAdmin: true }),
+    User.create({ email: 'david@email.com', password: '123', isAdmin: true }),
+    User.create({ email: 'valerie@email.com', password: '123', isAdmin: true }),
+    User.create({ email: 'frances@email.com', password: '123', isAdmin: true }),
+    User.create({ email: 'omri@email.com', password: '123' }),
+    User.create({ email: 'geoff@email.com', password: '123' }),
+    User.create({ email: 'corey@email.com', password: '123' })
+  ]);
+
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
-  console.log(`seeded ${results.length} users`);
+  console.log(`seeded ${users.length} users`);
+  console.log(`seeded ${results.length} results`);
   console.log(`seeded successfully`);
 }
 
