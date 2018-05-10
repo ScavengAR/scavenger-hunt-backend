@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Result, CustomMap } = require('../db/models');
-module.exports = router
+module.exports = router;
 
 // GET /api/users
 router.get('/', (req, res, next) => {
@@ -30,7 +30,7 @@ router.get('/:id/results', (req, res, next) => {
     }
   })
   .catch(next)
-})
+});
 
 // GET /api/users/:id/customMaps
 router.get('/:id/customMap', (req, res, next) => {
@@ -47,4 +47,4 @@ router.get('/:id/customMap', (req, res, next) => {
     }
   })
   .catch(next)
-})
+});
