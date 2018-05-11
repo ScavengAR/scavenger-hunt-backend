@@ -6,7 +6,7 @@ module.exports = router;
 router.get('/:id/results', (req, res, next) => {
   Result.findAll({
     where: {
-      userId: req.params.id
+      userId: req.params.id // this should check that the userId matches the id of the person who is making the request
     }
   })
   .then(foundResults => {
@@ -23,7 +23,7 @@ router.get('/:id/results', (req, res, next) => {
 router.get('/:id/customMap', (req, res, next) => {
   CustomMap.findAll({
     where: {
-      userId: req.params.id
+      userId: req.params.id // same as line 9
     }
   })
   .then(foundCustomMaps => {
