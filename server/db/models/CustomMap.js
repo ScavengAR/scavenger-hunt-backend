@@ -8,10 +8,16 @@ const CustomMap = db.define('customMap', {
     unique: true
   },
   address: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false,
   },
   instructions: {
-    type: Sequelize.TEXT
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
+  itemsOnMap: {
+    type: Sequelize.TEXT,
+    allowNull: false,
   }
 });
 
