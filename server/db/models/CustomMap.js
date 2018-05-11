@@ -14,10 +14,6 @@ const CustomMap = db.define('customMap', {
   instructions: {
     type: Sequelize.TEXT,
     allowNull: false
-  },
-  itemsOnMap: {
-    type: Sequelize.TEXT,
-    allowNull: false
   }
 });
 

@@ -2,6 +2,15 @@ const router = require('express').Router();
 const { User, Result, CustomMap } = require('../db/models');
 module.exports = router;
 
+// GET /api/users
+// Used for auth development.
+// To be removed or protected upon deployment
+router.get('/', (req, res, next) => {
+  User.findAll()
+  .then(users => res.json(users))
+  .catch(next);
+})
+
 // GET /api/users/:id/results
 router.get('/:id/results', (req, res, next) => {
   Result.findAll({
