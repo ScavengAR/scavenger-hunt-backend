@@ -14,10 +14,13 @@ const CustomMap = db.define('customMap', {
   instructions: {
     type: Sequelize.TEXT,
     allowNull: false
+<<<<<<< HEAD
   },
   itemsOnMap: {
     type: Sequelize.TEXT,
     allowNull: true
+=======
+>>>>>>> master
   }
 });
 
