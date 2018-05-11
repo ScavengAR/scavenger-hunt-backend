@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   CustomMap.findAll()
   .then(customMaps => res.json(customMaps))
   .catch(next);
-})
+});
 
 // GET/api/customMaps/:id
 router.get('/:id', (req, res, next) => {
@@ -23,4 +23,4 @@ router.get('/:id', (req, res, next) => {
     res.json(itemsForMap)
   })
   .catch(next);
-})
+});
