@@ -13,14 +13,6 @@ const Item = db.define('item', {
   y: { //y position - up and down
     type: Sequelize.INTEGER,
     allowNull: false
-  },
-  speed: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  },
-  captured: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false
   }
 });
 
