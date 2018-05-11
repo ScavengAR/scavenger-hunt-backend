@@ -9,15 +9,15 @@ const CustomMap = db.define('customMap', {
   },
   address: {
     type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: false
   },
   instructions: {
     type: Sequelize.TEXT,
-    allowNull: false,
+    allowNull: false
   },
   itemsOnMap: {
     type: Sequelize.TEXT,
-    allowNull: false,
+    allowNull: false
   }
 });
 
