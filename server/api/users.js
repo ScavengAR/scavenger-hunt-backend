@@ -29,7 +29,7 @@ router.get('/:id/results', (req, res, next) => {
 });
 
 // GET /api/users/:id/customMaps
-router.get('/:id/customMap', (req, res, next) => {
+router.get('/:id/customMaps', (req, res, next) => {
   CustomMap.findAll({
     where: {
       userId: req.params.id // same as line 9

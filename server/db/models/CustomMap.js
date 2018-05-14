@@ -7,12 +7,20 @@ const CustomMap = db.define('customMap', {
     allowNull: false,
     unique: true
   },
+  geolocation: {
+    type: Sequelize.ARRAY(Sequelize.STRING)
+  },
   address: {
     type: Sequelize.STRING,
     allowNull: false
   },
   instructions: {
     type: Sequelize.TEXT,
+    allowNull: false
+  },
+  customItems: {
+    type: Sequelize.ARRAY(Sequelize.JSON),
+    defaultValue: [],
     allowNull: false
   }
 });
