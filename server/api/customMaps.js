@@ -9,6 +9,13 @@ router.get('/', (req, res, next) => {
   .catch(next);
 });
 
+// POST /api/customMaps
+router.post('/', (req, res, next) => {
+  CustomMap.create(req.body)
+    .then(newMap => res.status(201).json(newMap))
+    .catch(next);
+})
+
 // GET/api/customMaps/:id
 router.get('/:id', (req, res, next) => {
   MapItem.findOne({

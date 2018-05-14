@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const DataTypes = require('sequelize/lib/data-types');
 const db = require('../db');
 
 const CustomMap = db.define('customMap', {
@@ -13,6 +14,11 @@ const CustomMap = db.define('customMap', {
   },
   instructions: {
     type: Sequelize.TEXT,
+    allowNull: false
+  },
+  customItems: {
+    type: DataTypes.ARRAY(DataTypes.JSON),
+    defaultValue: [],
     allowNull: false
   }
 });
