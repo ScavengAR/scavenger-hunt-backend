@@ -7,5 +7,5 @@ const MapItem = db.define('mapItem', {
   }
 });
 
-module.exports = MapItem;
+// module.exports = MapItem;
 

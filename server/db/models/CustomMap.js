@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const DataTypes = require('sequelize/lib/data-types');
 const db = require('../db');
 
 const CustomMap = db.define('customMap', {
@@ -7,6 +6,9 @@ const CustomMap = db.define('customMap', {
     type: Sequelize.STRING,
     allowNull: false,
     unique: true
+  },
+  geolocation: {
+    type: Sequelize.ARRAY(Sequelize.STRING)
   },
   address: {
     type: Sequelize.STRING,
@@ -17,7 +19,7 @@ const CustomMap = db.define('customMap', {
     allowNull: false
   },
   customItems: {
-    type: DataTypes.ARRAY(DataTypes.JSON),
+    type: Sequelize.ARRAY(Sequelize.JSON),
     defaultValue: [],
     allowNull: false
   }
