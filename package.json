@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "script/deploy",
-    "postinstall": "touch secrets.js",
+    "postinstall": "npm run seed",
     "seed": "node script/seed.js",
     "start": "node server",
     "start-dev": "NODE_ENV='development' & npm run start-server",
