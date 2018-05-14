@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 const router = require('express').Router();
-const User = require('../db/models/user');
+const { User } = require('../db/models');
 module.exports = router;
-=======
-const router = require('express').Router()
-const { User } = require('../db/models')
-module.exports = router
->>>>>>> master
 
 router.put('/login', (req, res, next) => {
   User.findOne({ where: { email: req.body.email } })
