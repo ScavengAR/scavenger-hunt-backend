@@ -5,7 +5,6 @@ module.exports = router;
 router.put('/login', (req, res, next) => {
   User.findOne({ where: { email: req.body.email } })
     .then(user => {
-      console.log('user', user);
       if (!user) {
         console.log('No such user found:', req.body.email);
         res.status(401).send('Wrong username and/or password');
@@ -13,7 +12,6 @@ router.put('/login', (req, res, next) => {
         console.log('Incorrect password for user:', req.body.email);
         res.status(401).send('Wrong username and/or password');
       } else {
-        console.log('in the else');
         req.login(user, err => (err ? next(err) : res.json(user)));
       }
     })
