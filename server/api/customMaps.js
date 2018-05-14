@@ -18,9 +18,9 @@ router.post('/', (req, res, next) => {
 
 // GET/api/customMaps/:id
 router.get('/:id', (req, res, next) => {
-  MapItem.findOne({
+  CustomMap.findOne({
     where: {
-      customMapId: req.params.id
+      id: req.params.id
     },
     include: [{
       all: true

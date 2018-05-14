@@ -7,7 +7,7 @@ User.hasMany(Result);
 Result.belongsTo(User, {as: 'user'});
 
 User.hasMany(CustomMap);
-CustomMap.belongsTo(User, {as: 'creator'});
+CustomMap.belongsTo(User);
 
 module.exports = {
   User,
