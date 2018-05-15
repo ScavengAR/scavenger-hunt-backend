@@ -63,7 +63,7 @@ async function seed() {
       latitude: '40.758697',
       longitude: '-73.985011',
       customItems: [{ x: 0, y: 0, z: 0 }, { x: 1, y: 0.2, z: -0.5 }]
-    }),
+    }).then(customMap => customMap.setUser(users[0])),
     CustomMap.create({
       name: 'Full Stack Academy HQ',
       address: '5 hanover square',
@@ -71,7 +71,7 @@ async function seed() {
       latitude: '40.705116',
       longitude: '-74.009236',
       customItems: [{ x: -1, y: 0, z: 0.5 }, { x: 0.3, y: 0.4, z: -1 }]
-    }),
+    }).then(customMap => customMap.setUser(users[1])),
     CustomMap.create({
       name: 'Murray Hill Theaters',
       address: '300 murray hill',
@@ -79,7 +79,7 @@ async function seed() {
       latitude: '40.734159',
       longitude: '-73.990802',
       customItems: [{ x: 0.7, y: 0, z: 1 }, { x: 0.7, y: 0.2, z: -2 }]
-    }),
+    }).then(customMap => customMap.setUser(users[2])),
     CustomMap.create({
       name: 'Sunset Park',
       address: '100 sunset',
@@ -87,7 +87,7 @@ async function seed() {
       latitude: '40.651837',
       longitude: '-74.004640',
       customItems: [{ x: 1.7, y: 0.3, z: -1 }, { x: -0.7, y: -0.2, z: 0 }]
-    })
+    }).then(customMap => customMap.setUser(users[3]))
   ]);
 
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
