@@ -18,7 +18,7 @@ const CustomMap = db.define('customMap', {
     allowNull: false
   },
   customItems: {
-    type: Sequelize.ARRAY(Sequelize.JSON),
+    type: Sequelize.ARRAY(Sequelize.JSONB),
     defaultValue: [],
     allowNull: false
   }
