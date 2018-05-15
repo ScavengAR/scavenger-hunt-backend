@@ -30,28 +30,28 @@ async function seed() {
 
   const results = await Promise.all([
     Result.create({ name: 'andrew', time: 300 }).then(result =>
-      result.addUser(users[1])
+      result.addUser(users[0])
     ),
     Result.create({ name: 'andrew', time: 400 }).then(result =>
-      result.addUser(users[1])
+      result.addUser(users[0])
     ),
     Result.create({ name: 'david', time: 400 }).then(result =>
-      result.addUser(users[2])
+      result.addUser(users[1])
     ),
     Result.create({ name: 'valerie', time: 600 }).then(result =>
-      result.addUser(users[3])
+      result.addUser(users[2])
     ),
     Result.create({ name: 'frances', time: 500 }).then(result =>
-      result.addUser(users[4])
+      result.addUser(users[3])
     ),
     Result.create({ name: 'omri', time: 200 }).then(result =>
-      result.addUser(users[5])
+      result.addUser(users[4])
     ),
     Result.create({ name: 'geoff', time: 150 }).then(result =>
-      result.addUser(users[6])
+      result.addUser(users[5])
     ),
     Result.create({ name: 'corey', time: 200 }).then(result =>
-      result.addUser(users[7])
+      result.addUser(users[6])
     )
   ]);
 
