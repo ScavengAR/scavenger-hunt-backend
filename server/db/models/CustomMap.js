@@ -7,9 +7,8 @@ const CustomMap = db.define('customMap', {
     allowNull: false,
     unique: true
   },
-  geolocation: {
-    type: Sequelize.ARRAY(Sequelize.STRING)
-  },
+  latitude: Sequelize.STRING,
+  longitude: Sequelize.STRING,
   address: {
     type: Sequelize.STRING,
     allowNull: false
