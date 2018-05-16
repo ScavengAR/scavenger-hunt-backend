@@ -62,16 +62,66 @@ async function seed() {
       instructions: 'Here are instructions to start this banana hunt: ...',
       latitude: '40.758697',
       longitude: '-73.985011',
-      customItems: [{ x: 0, y: 0, z: 0 }, { x: 1, y: 0.2, z: -0.5 }]
+      customItems: [{ x: 0, y: 0, z: 0 }, { x: 1, y: 0.2, z: -0.5 }, { x: -0.3, y: 0.3 }]
     }).then(customMap => customMap.setUser(users[0])),
     CustomMap.create({
       name: 'Full Stack Academy HQ',
       address: '5 hanover square',
-      instructions: 'Here are instructions to start this banana hunt: ...',
+      instructions: 'Face your phone at the pink outline on the white board.',
       latitude: '40.705116',
       longitude: '-74.009236',
-      customItems: [{ x: -1, y: 0, z: 0.5 }, { x: 0.3, y: 0.4, z: -1 }]
-    }).then(customMap => customMap.setUser(users[1])),
+      customItems: [{
+          x: 0.06518097042973661,
+          y: -0.018196591949322313,
+          z: 0.06200135454383886
+        },
+        {
+          x: -3.624997093812364,
+          y: -0.46887821009475755,
+          z: 1.9980520908759025
+        },
+        {
+          x: -1.6710298463811302,
+          y: 0.6254725027932175,
+          z: 3.5885598624587707
+        },
+        {
+          x: -3.870294632772992,
+          y: -0.245423321092815,
+          z: 7.718979766303994
+        },
+        {
+          x: 0.19921613730886312,
+          y: 0.28704271129710324,
+          z: 13.282829767801465
+        },
+        {
+          x: -0.24986483400948828,
+          y: -0.5658843894220565,
+          z: 7.5964914558197485
+        },
+        {
+          x: 0.02544026463775911,
+          y: -0.620973113671865,
+          z: 7.903682520844832
+        },
+        {
+          x: 0.31277519966403783,
+          y: -0.6175987710419334,
+          z: 7.54153097089776
+        },
+        {
+          x: 0.2791039394701071,
+          y: -1.219492645685125,
+          z: -1.1676812101384455
+        },
+        {
+          x: 7.357788417819801,
+          y: -0.2975692035887778,
+          z: 8.227692381067504
+        }
+      ]
+    }).then(customMap => customMap.setUser(users[4])),
     CustomMap.create({
       name: 'Murray Hill Theaters',
       address: '300 murray hill',
