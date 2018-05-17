@@ -12,7 +12,7 @@ describe('User routes', () => {
   })
 
   describe('/api/users/', () => {
-    const codysEmail = 'cody@scavengar.com'
+    const codysEmail = 'cody@banana-hunt.com'
 
     beforeEach(() => {
       return User.create({
