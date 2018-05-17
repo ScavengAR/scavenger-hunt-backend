@@ -1,2 +1,2 @@
-const domain = 'http://scavengar-hunt.herokuapp.com/';
+const domain = 'http://banana-hunt.herokuapp.com/';
 module.exports = domain;

@@ -1,7 +1,7 @@
 {
-  "name": "scavengar-hunt-backend",
+  "name": "scavenger-hunt-backend",
   "version": "1.0.0",
-  "description": "back-end code for ScavengAR",
+  "description": "back-end code for Banana Hunt",
   "engines": {
     "node": ">= 7.0.0"
   },
