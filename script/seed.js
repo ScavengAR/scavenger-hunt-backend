@@ -125,7 +125,7 @@ async function seed() {
     CustomMap.create({
       name: "You’ve got a friend in me",
       address:"In the privacy of your home.",
-      instruction: "Play when you need a friend",
+      instructions: "Play when you need a friend",
       latitude: "40.639352928935374",
       longitude: "-74.00472318503404",
       customItems: [
@@ -242,7 +242,7 @@ async function seed() {
         {x:1.7653754338254402,y:-0.2781009051855289,z:-1.9596194915282106},
         {x:1.6396939420398695,y:-0.6893485445460206,z:-1.9567232919224107}
       ]
-    }).then(customMap => customMap.setUser(users[2])),
+    }).then(customMap => customMap.setUser(users[1])),
     CustomMap.create({
       name: 'Murray Hill Theaters',
       address: '300 Murray Hill',
@@ -254,7 +254,7 @@ async function seed() {
     CustomMap.create({
       name: 'Sunset Park',
       address: '100 sunset',
-      instructions: 'Here are instructions to start this banana hunt: ...',
+      instructions: 'Start facing the grocery store on the corner of 50 street.',
       latitude: '40.651837',
       longitude: '-74.004640',
       customItems: [{ x: 1.7, y: 0.3, z: -1 }, { x: -0.7, y: -0.2, z: 0 }]
