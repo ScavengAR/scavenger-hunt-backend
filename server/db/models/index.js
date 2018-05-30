@@ -15,7 +15,7 @@ CustomMap.belongsTo(User);
 
 // Ensures that a unique leaderboard will be maintained for each custom map
 CustomMap.hasMany(Result);
-Result.belongsTo(CustomMap, { as: 'map' });
+Result.belongsTo(CustomMap, { foreignKey: 'mapId' });
 
 module.exports = {
   User,
