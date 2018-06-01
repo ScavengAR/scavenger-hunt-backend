@@ -12,6 +12,19 @@ router.get('/', (req, res, next) => {
     .catch(next);
 });
 
+// GET /api/results/quickPlay
+router.get('/quickPlay', (req, res, next) => {
+  Result.findAll({
+    where: {
+      mapId: null
+    },
+    order: [['time', 'ASC']], // order times from least to greatest
+    limit: 10 // fetch top 10 scores
+  })
+    .then(results => res.json(results))
+    .catch(next);
+});
+
 // POST /api/results
 router.post('/', (req, res, next) => {
   Result.create(req.body)
