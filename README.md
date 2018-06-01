@@ -62,7 +62,7 @@ This script can be used on the backend's and the frontend's separate package.jso
 
 ### `npm test`
 
-Runs the Mocha/Chai test runner on the tests.
+Runs the Jest test runner.
 
 ## About
 
